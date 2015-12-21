@@ -5,7 +5,10 @@ var lön = document.getElementById('lön')
 
 
 function Calculate() {
-    var försäljning = document.getElementById('försäljningssumma').value * 0.091;
+    var försäljning = document.getElementById('försäljningssumma').value * 0.09;
 
-    document.getElementById('lön').innerHTML = Number(månadslön) + Number(försäljning);
+    if (document.getElementById('försäljningssumma').value <= 0)
+        return document.getElementById('lön').innerHTML = Number(månadslön);
+    else
+        return document.getElementById('lön').innerHTML = Number(månadslön) + Number(försäljning);
 }
