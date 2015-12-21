@@ -8,4 +8,4 @@ function Add() {
     var taltre = document.getElementById('tal-tre').value;
     
     return document.getElementById('summa').innerHTML = Number(talett) + Number(taltvå) + Number(taltre);
-}
+} 
