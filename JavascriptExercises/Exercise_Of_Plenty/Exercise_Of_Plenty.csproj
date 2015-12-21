@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="HTML\index2.html" />
     <Content Include="HTML\index3.html" />
+    <Content Include="HTML\index4.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -81,6 +82,7 @@
     <Content Include="Scripts\index.js" />
     <Content Include="Scripts\index2.js" />
     <Content Include="Scripts\index3.js" />
+    <Content Include="Scripts\index4.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
