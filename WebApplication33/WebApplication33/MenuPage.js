@@ -16,7 +16,7 @@ if (happyhour.getHours() === 23) {
 
     console.log("Happy hour right now!! Price:", x + "!");
 } else {
-    price2 = document.getElementsByClassName('price');
+    price2 = document.getElementsByClassName('price'); 
     //console.log('hej');
 }
 
