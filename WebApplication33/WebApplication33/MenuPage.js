@@ -1,22 +1,59 @@
 ﻿//happy hour logic:
 
 var price2;
-//alert(price2[0].innerText);
 var happyhour = new Date();
-
-if (happyhour.getHours() === 23) {
+var weekday = happyhour.getDay();
+if (happyhour.getHours() === 00) {
     price2 = document.getElementsByClassName('price');
     for (var i = 0; i < price2.length; i++) {
         var x = price2[i].innerHTML * 0.5;
-        //var element = price2[0].innerHTML;
-        var element = price2[i];
-        //var element = document.getElementsByClassName('price');
-        element.innerHTML = x; 
+        if (weekday < 6) {
+            switch (weekday) {
+                case 1:
+                    var element = price2[0];
+                    element.innerHTML = x;
+                    console.log("Happy Monday!! Price:", x + "!");
+                    break;
+                case 2:
+                    var element = price2[1];
+                    element.innerHTML = x;
+                    console.log("Tuesday happy hour!! Price:", x + "!");
+                    break;
+                case 3:
+                    var element = price2[2];
+                    element.innerHTML = x;
+                    console.log("Wednesday happy hour!! Price:", x + "!");
+                    break;
+
+                case 4:
+                    var element = price2[3];
+                    element.innerHTML = x;
+                    console.log("Thursday happy hour!! Price:", x + "!");
+                    break;
+
+                case 5:
+                    var element = price2[4];
+                    element.innerHTML = x;
+                    console.log("Friday happy hour!! Price:", x + "!");
+                    break;
+
+                case 6:
+                    var element = price2[5];
+                    element.innerHTML = x;
+                    console.log("Saturday happy hour!! Price:", x + "!");
+                    break;
+
+                default:
+                    var element = price2[6];
+                    element.innerHTML = x;
+                    console.log("Sunday happy hour!! Price:", x + "!");
+                    break;
+            }
+        }
     }
 
-    console.log("Happy hour right now!! Price:", x + "!");
 } else {
-    price2 = document.getElementsByClassName('price'); 
+    price2 = document.getElementsByClassName('price');
     //console.log('hej');
 }
 
