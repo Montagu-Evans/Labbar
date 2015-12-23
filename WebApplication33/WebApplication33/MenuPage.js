@@ -1,50 +1,50 @@
 ﻿//happy hour logic:
-
-var price2;
 var happyhour = new Date();
 var weekday = happyhour.getDay();
+var reducedprice;
+
 if (happyhour.getHours() === 00) {
-    price2 = document.getElementsByClassName('price');
-    for (var i = 0; i < price2.length; i++) {
-        var x = price2[i].innerHTML * 0.5;
+    reducedprice = document.getElementsByClassName('price');
+    for (var i = 0; i < reducedprice.length; i++) {
+        var x = reducedprice[i].innerHTML * 0.5;
         if (weekday < 6) {
             switch (weekday) {
                 case 1:
-                    var element = price2[0];
+                    var element = reducedprice[0];
                     element.innerHTML = x;
                     console.log("Happy Monday!! Price:", x + "!");
                     break;
                 case 2:
-                    var element = price2[1];
+                    var element = reducedprice[1];
                     element.innerHTML = x;
                     console.log("Tuesday happy hour!! Price:", x + "!");
                     break;
                 case 3:
-                    var element = price2[2];
+                    var element = reducedprice[2];
                     element.innerHTML = x;
                     console.log("Wednesday happy hour!! Price:", x + "!");
                     break;
 
                 case 4:
-                    var element = price2[3];
+                    var element = reducedprice[3];
                     element.innerHTML = x;
                     console.log("Thursday happy hour!! Price:", x + "!");
                     break;
 
                 case 5:
-                    var element = price2[4];
+                    var element = reducedprice[4];
                     element.innerHTML = x;
                     console.log("Friday happy hour!! Price:", x + "!");
                     break;
 
                 case 6:
-                    var element = price2[5];
+                    var element = reducedprice[5];
                     element.innerHTML = x;
                     console.log("Saturday happy hour!! Price:", x + "!");
                     break;
 
                 default:
-                    var element = price2[6];
+                    var element = reducedprice[6];
                     element.innerHTML = x;
                     console.log("Sunday happy hour!! Price:", x + "!");
                     break;
@@ -53,8 +53,7 @@ if (happyhour.getHours() === 00) {
     }
 
 } else {
-    price2 = document.getElementsByClassName('price');
-    //console.log('hej');
+    reducedprice = document.getElementsByClassName('price');
 }
 
 
@@ -62,7 +61,14 @@ if (happyhour.getHours() === 00) {
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
 
+
 /*Add pictures function to span:*/
+var element = document.getElementsByTagName('span');
+for (var i = 0; i < element.length; i++) {
+    var img = document.createElement('img');
+    img.setAttribute('src', 'Images/Hamburger.png');
+    element[i].appendChild(img);
+};
 
 /*Add todays offer function. 
 Make price background red.
@@ -88,11 +94,11 @@ Reduce price by another 20%:*/
     
     //Får ut alla att bli 9.99. Kom ihåg att ändra tiden i if-satsen
     if (happyhour.getHours() === 22) {
-    price2 = document.getElementsByClassName('price');
-    for (var i = 0; i < price2.length; i++) {
-        var x = price2[i].innerHTML * 0.5;
-        //var element = price2[0].innerHTML;
-        var element = price2[i];
+    reducedprice = document.getElementsByClassName('price');
+    for (var i = 0; i < reducedprice.length; i++) {
+        var x = reducedprice[i].innerHTML * 0.5;
+        //var element = reducedprice[0].innerHTML;
+        var element = reducedprice[i];
         element.innerHTML = x;
     }
 
