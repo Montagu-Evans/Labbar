@@ -3,7 +3,7 @@ var happyhour = new Date();
 var weekday = happyhour.getDay();
 var reducedprice;
 
-if (happyhour.getHours() === 00) {
+if (happyhour.getHours() === 18) {
     reducedprice = document.getElementsByClassName('price');
     for (var i = 0; i < reducedprice.length; i++) {
         var x = reducedprice[i].innerHTML * 0.5;
@@ -67,7 +67,8 @@ var element = document.getElementsByTagName('span');
 for (var i = 0; i < element.length; i++) {
     var img = document.createElement('img');
     img.setAttribute('src', 'Images/Hamburger.png');
-    element[i].appendChild(img);
+        element[i].textContent = " ";
+        element[i].appendChild(img);
 };
 
 /*Add todays offer function. 
