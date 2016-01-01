@@ -1,80 +1,125 @@
 ﻿//happy hour logic:
-var happyhour = new Date();
-var weekday = happyhour.getDay();
+var happyhour;
+var weekday;
 var reducedprice;
-
-if (happyhour.getHours() === 18) {
+var x;
+var element;
+function HappyHour() {
+    var happyhour = new Date();
+    var weekday = happyhour.getDay();
     reducedprice = document.getElementsByClassName('price');
-    for (var i = 0; i < reducedprice.length; i++) {
-        var x = reducedprice[i].innerHTML * 0.5;
+
+    if (happyhour.getHours() === 22) {
+        
+        for (var i = 0; i < reducedprice.length; i++) {
+            x = reducedprice[i].innerHTML * 0.5;
+        }
+
         if (weekday < 6) {
             switch (weekday) {
                 case 1:
-                    var element = reducedprice[0];
+                    element = reducedprice[0];
                     element.innerHTML = x;
                     console.log("Happy Monday!! Price:", x + "!");
                     break;
                 case 2:
-                    var element = reducedprice[1];
+                    element = reducedprice[1];
                     element.innerHTML = x;
                     console.log("Tuesday happy hour!! Price:", x + "!");
                     break;
                 case 3:
-                    var element = reducedprice[2];
+                    element = reducedprice[2];
                     element.innerHTML = x;
                     console.log("Wednesday happy hour!! Price:", x + "!");
                     break;
 
                 case 4:
-                    var element = reducedprice[3];
+                    element = reducedprice[3];
                     element.innerHTML = x;
                     console.log("Thursday happy hour!! Price:", x + "!");
                     break;
 
                 case 5:
-                    var element = reducedprice[4];
-                    element.innerHTML = x;
+                    element = reducedprice[4];
+                    element.innerHTML = x.toFixed(2);
                     console.log("Friday happy hour!! Price:", x + "!");
                     break;
 
                 case 6:
-                    var element = reducedprice[5];
+                    element = reducedprice[5];
                     element.innerHTML = x;
                     console.log("Saturday happy hour!! Price:", x + "!");
                     break;
 
                 default:
-                    var element = reducedprice[6];
+                    element = reducedprice[6];
                     element.innerHTML = x;
                     console.log("Sunday happy hour!! Price:", x + "!");
                     break;
             }
         }
-    }
 
-} else {
-    reducedprice = document.getElementsByClassName('price');
+    } else {
+        reducedprice = document.getElementsByClassName('price');
+    }
 }
 
 
 ////Method calls:
+HappyHour();
+AdjustPrice();
+AddPictures();
 
+//TodaysOffer();
+var adjustprice;
+var numericValue;
 //Adjust price function: (add .toFixed(2) for 2 decimals)
-
+function AdjustPrice() {
+    adjustprice = document.getElementsByClassName('price');
+    for (var i = 0; i < adjustprice.length; i++) {
+        numericValue = parseFloat(adjustprice[i].innerHTML);
+    }
+    console.log(numericValue.toFixed(1));
+    return numericValue.toFixed(1);
+}
 
 /*Add pictures function to span:*/
-var element = document.getElementsByTagName('span');
-for (var i = 0; i < element.length; i++) {
-    var img = document.createElement('img');
-    img.setAttribute('src', 'Images/Hamburger.png');
+function AddPictures() {
+    element = document.getElementsByTagName('span');
+    for (var i = 0; i < element.length; i++) {
+        var img = document.createElement('img');
+        img.setAttribute('src', 'Images/Hamburger.png');
         element[i].textContent = " ";
         element[i].appendChild(img);
-};
+    };
+}
 
 /*Add todays offer function. 
 Make price background red.
 Reduce price by another 20%:*/
+//var todaysoffer;
+//var alldayeveryday;
+//var price;
 
+//function TodaysOffer(a, b) {
+//    return a * b;
+//}
+//myObject = TodaysOffer.call(myObject, )
+//var todaysoffer = new Date();
+    //var alldayeveryday = todaysoffer.getDay();
+    //var price = document.getElementsByClassName('price');
+    //for (var i = 0; i < price.length; i++) {
+    //    if (alldayeveryday < 6) {
+    //        switch (alldayeveryday) {
+    //            case 1:
+
+    //                break;
+
+    //            default:
+    //        }
+    //    }
+    //}
+//}
 
 /*Stretch exercises: (increasing tuffness for each number!)
 
