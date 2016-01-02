@@ -2,59 +2,60 @@
 var happyhour;
 var weekday;
 var reducedprice;
-var x;
+var newPrice;
 var element;
+
 function HappyHour() {
-    var happyhour = new Date();
-    var weekday = happyhour.getDay();
+    happyhour = new Date();
+    weekday = happyhour.getDay();
     reducedprice = document.getElementsByClassName('price');
 
-    if (happyhour.getHours() === 22) {
-        
+    if (happyhour.getHours() === 00) {
+
         for (var i = 0; i < reducedprice.length; i++) {
-            x = reducedprice[i].innerHTML * 0.5;
+            newPrice = reducedprice[i].innerHTML * 0.5;
         }
 
         if (weekday < 6) {
             switch (weekday) {
                 case 1:
                     element = reducedprice[0];
-                    element.innerHTML = x;
-                    console.log("Happy Monday!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Happy Monday!! Price:", newPrice + "!");
                     break;
                 case 2:
                     element = reducedprice[1];
-                    element.innerHTML = x;
-                    console.log("Tuesday happy hour!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Tuesday happy hour!! Price:", newPrice + "!");
                     break;
                 case 3:
                     element = reducedprice[2];
-                    element.innerHTML = x;
-                    console.log("Wednesday happy hour!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Wednesday happy hour!! Price:", newPrice + "!");
                     break;
 
                 case 4:
                     element = reducedprice[3];
-                    element.innerHTML = x;
-                    console.log("Thursday happy hour!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Thursday happy hour!! Price:", newPrice + "!");
                     break;
 
                 case 5:
                     element = reducedprice[4];
-                    element.innerHTML = x.toFixed(2);
-                    console.log("Friday happy hour!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Friday happy hour!! Price:", newPrice + "!");
                     break;
 
                 case 6:
                     element = reducedprice[5];
-                    element.innerHTML = x;
-                    console.log("Saturday happy hour!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Saturday happy hour!! Price:", newPrice + "!");
                     break;
 
                 default:
                     element = reducedprice[6];
-                    element.innerHTML = x;
-                    console.log("Sunday happy hour!! Price:", x + "!");
+                    element.innerHTML = newPrice;
+                    console.log("Sunday happy hour!! Price:", newPrice + "!");
                     break;
             }
         }
@@ -69,18 +70,23 @@ function HappyHour() {
 HappyHour();
 AdjustPrice();
 AddPictures();
+TodaysOffer();
 
-//TodaysOffer();
+//Adjust price function: (add .toFixed(2) for 2 decimals)
 var adjustprice;
 var numericValue;
-//Adjust price function: (add .toFixed(2) for 2 decimals)
+
 function AdjustPrice() {
-    adjustprice = document.getElementsByClassName('price');
-    for (var i = 0; i < adjustprice.length; i++) {
-        numericValue = parseFloat(adjustprice[i].innerHTML);
+    HappyHour = document.getElementsByClassName('price');
+    //numericValue = Number(adjustprice.innerHTML);
+    for (var i = 0; i < HappyHour.length; i++) {
+        numericValue = Number(HappyHour[i].innerHTML);
+        console.log(numericValue.toFixed(3));
+        return numericValue.toFixed(3);
     }
-    console.log(numericValue.toFixed(1));
-    return numericValue.toFixed(1);
+
+    console.log(numericValue.toFixed(3));
+    return numericValue.toFixed(3);
 }
 
 /*Add pictures function to span:*/
@@ -97,29 +103,62 @@ function AddPictures() {
 /*Add todays offer function. 
 Make price background red.
 Reduce price by another 20%:*/
-//var todaysoffer;
-//var alldayeveryday;
-//var price;
+var todaysoffer;
 
-//function TodaysOffer(a, b) {
-//    return a * b;
-//}
-//myObject = TodaysOffer.call(myObject, )
-//var todaysoffer = new Date();
-    //var alldayeveryday = todaysoffer.getDay();
-    //var price = document.getElementsByClassName('price');
-    //for (var i = 0; i < price.length; i++) {
-    //    if (alldayeveryday < 6) {
-    //        switch (alldayeveryday) {
-    //            case 1:
+function TodaysOffer() {
+    todaysoffer = document.getElementsByClassName('price');
+        for (var i = 0; i < todaysoffer.length; i++) {
+            newPrice = todaysoffer[i].innerHTML * 0.8;
+        }
 
-    //                break;
+    if (weekday < 6) {
+        switch (weekday) {
+            case 1:
+                element = todaysoffer[0];
+                element.innerHTML = newPrice;
+                todaysoffer[0].style.backgroundColor = 'red';
+                break;
+            case 2:
+                element = reducedprice[1];
+                element.innerHTML = newPrice;
+                todaysoffer[1].style.backgroundColor = 'red';
+                break;
+            case 3:
+                element = reducedprice[2];
+                element.innerHTML = newPrice;
+                todaysoffer[2].style.backgroundColor = 'red';
+                break;
 
-    //            default:
-    //        }
-    //    }
-    //}
-//}
+            case 4:
+                element = reducedprice[3];
+                element.innerHTML = newPrice;
+                todaysoffer[3].style.backgroundColor = 'red';
+                break;
+
+            case 5:
+                element = reducedprice[4];
+                element.innerHTML = newPrice;
+                todaysoffer[4].style.backgroundColor = 'red';
+                break;
+
+            case 6:
+                element = reducedprice[5];
+                element.innerHTML = newPrice;
+                todaysoffer[5].style.backgroundColor = 'red';
+                break;
+
+            default:
+                element = todaysoffer[6];
+                element.innerHTML = newPrice;
+                todaysoffer[6].style.backgroundColor = 'red';
+                break;
+        }
+    } else {
+        todaysoffer = document.getElementsByClassName('price');
+    }
+
+}
+
 
 /*Stretch exercises: (increasing tuffness for each number!)
 
