@@ -2,9 +2,9 @@
 var happyhour = new Date();
 var price = document.getElementsByClassName('price');
 var newPrice;
+var weekday = happyhour.getDay();
+var element;
 function HappyHour() {
-    weekday = happyhour.getDay();
-
     if (happyhour.getHours() === 19) {
         for (var i = 0; i < price.length; i++) {
             newPrice = AdjustPrice(price[i].innerHTML);
@@ -12,7 +12,7 @@ function HappyHour() {
 
         if (weekday < 6) {
             switch (weekday) {
-                case 1:
+                case (weekday):
                     element = price[0];
                     element.innerHTML = newPrice;
                     break;
@@ -49,7 +49,6 @@ function HappyHour() {
     }
 }
 
-
 ////Method calls:
 HappyHour();
 AdjustPrice();
@@ -62,7 +61,6 @@ function AdjustPrice(price) {
 }
 
 /*Add pictures function to span:*/
-var element;
 function AddPictures() {
     element = document.getElementsByTagName('span');
     for (var i = 0; i < element.length; i++) {
@@ -76,56 +74,45 @@ function AddPictures() {
 /*Add todays offer function. 
 Make price background red.
 Reduce price by another 20%:*/
-var weekday;
-var todaysoffer;
-function TodaysOffer() {
-    for (var i = 0; i < price.length; i++) {
-        todaysoffer = price[i].innerHTML;
-    }
 
+function TodaysOffer() {
     if (weekday < 6) {
         switch (weekday) {
             case 1:
-                //todaysoffer.style.backgroundColor = 'red';
-                price.innerHTML = (price.innerHTML * 0.8);
+                price[0] = price[0].style.backgroundColor = 'red';
+                price[0].innerHTML *= 0.8;
                 break;
-            //case 2:
-            //    test = todaysoffer[1];
-            //    test.innerHTML = todaysprice;
-            //    break;
 
-            //case 3:
-            //    test = todaysoffer[2];
-            //    test.innerHTML = todaysprice * 0.5;
-            //    todaysoffer[2].style.backgroundColor = 'red';
-            //    break;
+            case 2:
+                price[1] = price[1].style.backgroundColor = 'red';
+                price[1].innerHTML *= 0.8;
+                break;
 
-            //case 4:
-            //    test = todaysoffer[3];
-            //    test.innerHTML = todaysprice * 0.5;
-            //    todaysoffer[3].style.backgroundColor = 'red';
-            //    break;
+            case 3:
+                price[2] = price[2].style.backgroundColor = 'red';
+                price[2].innerHTML *= 0.8;
+                break;
 
-            //case 5:
-            //    test = todaysoffer[4];
-            //    test.innerHTML = todaysprice * 0.5;
-            //    todaysoffer[4].style.backgroundColor = 'red';
-            //    break;
+            case 4:
+                price[3] = price[3].style.backgroundColor = 'red';
+                price[3].innerHTML *= 0.8;
+                break;
 
-            //case 6:
-            //    test = todaysoffer[5];
-            //    test.innerHTML = todaysprice * 0.5;
-            //    todaysoffer[5].style.backgroundColor = 'red';
+            case 5:
+                price[4] = price[4].style.backgroundColor = 'red';
+                price[4].innerHTML *= 0.8;
+                break;
 
-            //default:
-            //    test = todaysoffer[6];
-            //    test.innerHTML = todaysprice * 0.5;
-            //    todaysoffer[6].style.backgroundColor = 'red';
-            //    break;
+            case 6:
+                price[5] = price[5].style.backgroundColor = 'red';
+                price[5].innerHTML *= 0.8;
+
+            default:
+                price[6] = price[6].style.backgroundColor = 'red';
+                price[6].innerHTML *= 0.8;
         }
     }
 }
-
 
 /*Stretch exercises: (increasing tuffness for each number!)
 
