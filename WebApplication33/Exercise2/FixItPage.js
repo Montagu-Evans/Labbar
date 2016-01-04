@@ -5,7 +5,9 @@ with an alert that shows the result when the box is clicked!
 
 ###Window object at page 124:###
 1. Link the script with FixIt.hmtl
-2. Add som tags that doesn't change the visual part of the paragraph.
+2. SKIP **
+    Add som tags that doesn't change the visual part of the paragraph.
+
 3.Play with the properties at page 124 in the book. 
   Use properties creatively to display things at the html page
 4.Add a stylesheet that displays the changed words in fat font and in red.

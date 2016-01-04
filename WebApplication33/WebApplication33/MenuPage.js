@@ -1,67 +1,51 @@
 ﻿//happy hour logic:
-var happyhour;
-var weekday;
-var reducedprice;
+var happyhour = new Date();
+var price = document.getElementsByClassName('price');
 var newPrice;
-var element;
-
 function HappyHour() {
-    happyhour = new Date();
     weekday = happyhour.getDay();
-    reducedprice = document.getElementsByClassName('price');
 
-    if (happyhour.getHours() === 00) {
-
-        for (var i = 0; i < reducedprice.length; i++) {
-            newPrice = reducedprice[i].innerHTML * 0.5;
+    if (happyhour.getHours() === 19) {
+        for (var i = 0; i < price.length; i++) {
+            newPrice = AdjustPrice(price[i].innerHTML);
         }
 
         if (weekday < 6) {
             switch (weekday) {
                 case 1:
-                    element = reducedprice[0];
+                    element = price[0];
                     element.innerHTML = newPrice;
-                    console.log("Happy Monday!! Price:", newPrice + "!");
                     break;
                 case 2:
-                    element = reducedprice[1];
+                    element = price[1];
                     element.innerHTML = newPrice;
-                    console.log("Tuesday happy hour!! Price:", newPrice + "!");
                     break;
                 case 3:
-                    element = reducedprice[2];
+                    element = price[2];
                     element.innerHTML = newPrice;
-                    console.log("Wednesday happy hour!! Price:", newPrice + "!");
                     break;
 
                 case 4:
-                    element = reducedprice[3];
+                    element = price[3];
                     element.innerHTML = newPrice;
-                    console.log("Thursday happy hour!! Price:", newPrice + "!");
                     break;
 
                 case 5:
-                    element = reducedprice[4];
+                    element = price[4];
                     element.innerHTML = newPrice;
-                    console.log("Friday happy hour!! Price:", newPrice + "!");
                     break;
 
                 case 6:
-                    element = reducedprice[5];
+                    element = price[5];
                     element.innerHTML = newPrice;
-                    console.log("Saturday happy hour!! Price:", newPrice + "!");
                     break;
 
                 default:
-                    element = reducedprice[6];
+                    element = price[6];
                     element.innerHTML = newPrice;
-                    console.log("Sunday happy hour!! Price:", newPrice + "!");
                     break;
             }
         }
-
-    } else {
-        reducedprice = document.getElementsByClassName('price');
     }
 }
 
@@ -73,23 +57,12 @@ AddPictures();
 TodaysOffer();
 
 //Adjust price function: (add .toFixed(2) for 2 decimals)
-var adjustprice;
-var numericValue;
-
-function AdjustPrice() {
-    HappyHour = document.getElementsByClassName('price');
-    //numericValue = Number(adjustprice.innerHTML);
-    for (var i = 0; i < HappyHour.length; i++) {
-        numericValue = Number(HappyHour[i].innerHTML);
-        console.log(numericValue.toFixed(3));
-        return numericValue.toFixed(3);
-    }
-
-    console.log(numericValue.toFixed(3));
-    return numericValue.toFixed(3);
+function AdjustPrice(price) {
+    return (price * 0.5).toFixed(2);
 }
 
 /*Add pictures function to span:*/
+var element;
 function AddPictures() {
     element = document.getElementsByTagName('span');
     for (var i = 0; i < element.length; i++) {
@@ -103,60 +76,54 @@ function AddPictures() {
 /*Add todays offer function. 
 Make price background red.
 Reduce price by another 20%:*/
+var weekday;
 var todaysoffer;
-
 function TodaysOffer() {
-    todaysoffer = document.getElementsByClassName('price');
-        for (var i = 0; i < todaysoffer.length; i++) {
-            newPrice = todaysoffer[i].innerHTML * 0.8;
-        }
+    for (var i = 0; i < price.length; i++) {
+        todaysoffer = price[i].innerHTML;
+    }
 
     if (weekday < 6) {
         switch (weekday) {
             case 1:
-                element = todaysoffer[0];
-                element.innerHTML = newPrice;
-                todaysoffer[0].style.backgroundColor = 'red';
+                //todaysoffer.style.backgroundColor = 'red';
+                price.innerHTML = (price.innerHTML * 0.8);
                 break;
-            case 2:
-                element = reducedprice[1];
-                element.innerHTML = newPrice;
-                todaysoffer[1].style.backgroundColor = 'red';
-                break;
-            case 3:
-                element = reducedprice[2];
-                element.innerHTML = newPrice;
-                todaysoffer[2].style.backgroundColor = 'red';
-                break;
+            //case 2:
+            //    test = todaysoffer[1];
+            //    test.innerHTML = todaysprice;
+            //    break;
 
-            case 4:
-                element = reducedprice[3];
-                element.innerHTML = newPrice;
-                todaysoffer[3].style.backgroundColor = 'red';
-                break;
+            //case 3:
+            //    test = todaysoffer[2];
+            //    test.innerHTML = todaysprice * 0.5;
+            //    todaysoffer[2].style.backgroundColor = 'red';
+            //    break;
 
-            case 5:
-                element = reducedprice[4];
-                element.innerHTML = newPrice;
-                todaysoffer[4].style.backgroundColor = 'red';
-                break;
+            //case 4:
+            //    test = todaysoffer[3];
+            //    test.innerHTML = todaysprice * 0.5;
+            //    todaysoffer[3].style.backgroundColor = 'red';
+            //    break;
 
-            case 6:
-                element = reducedprice[5];
-                element.innerHTML = newPrice;
-                todaysoffer[5].style.backgroundColor = 'red';
-                break;
+            //case 5:
+            //    test = todaysoffer[4];
+            //    test.innerHTML = todaysprice * 0.5;
+            //    todaysoffer[4].style.backgroundColor = 'red';
+            //    break;
 
-            default:
-                element = todaysoffer[6];
-                element.innerHTML = newPrice;
-                todaysoffer[6].style.backgroundColor = 'red';
-                break;
+            //case 6:
+            //    test = todaysoffer[5];
+            //    test.innerHTML = todaysprice * 0.5;
+            //    todaysoffer[5].style.backgroundColor = 'red';
+
+            //default:
+            //    test = todaysoffer[6];
+            //    test.innerHTML = todaysprice * 0.5;
+            //    todaysoffer[6].style.backgroundColor = 'red';
+            //    break;
         }
-    } else {
-        todaysoffer = document.getElementsByClassName('price');
     }
-
 }
 
 
@@ -179,11 +146,11 @@ function TodaysOffer() {
     
     //Får ut alla att bli 9.99. Kom ihåg att ändra tiden i if-satsen
     if (happyhour.getHours() === 22) {
-    reducedprice = document.getElementsByClassName('price');
-    for (var i = 0; i < reducedprice.length; i++) {
-        var x = reducedprice[i].innerHTML * 0.5;
-        //var element = reducedprice[0].innerHTML;
-        var element = reducedprice[i];
+    price = document.getElementsByClassName('price');
+    for (var i = 0; i < price.length; i++) {
+        var x = price[i].innerHTML * 0.5;
+        //var element = price[0].innerHTML;
+        var element = price[i];
         element.innerHTML = x;
     }
 
