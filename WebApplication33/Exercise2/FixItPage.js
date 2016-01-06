@@ -72,3 +72,8 @@ function PlayingWithProperties() {
 
     //alert(document.getElementById('makeMeAnArray').innerHTML = "Screen Width: " + screen.width + " " + "Screen Height: " + screen.height);
 }
+
+var elementTag = document.getElementsByTagName('p');
+for (var i = 0; i < elementTag.length; i++) {
+    elementTag[i].innerHTML = elementTag[i].innerHTML.replace('meebo', '<span style="color:red"><strong>meebo</strong></span>');
+}
