@@ -39,24 +39,15 @@ Bonus exercises:
 
 */
 
-/* --- Playing with properties on PAGE 124 --- */
+
+/* --- 3.Play with the properties at page 124 in the book. --- */
 var elementBoxOne = document.createElement('div');
 elementBoxOne.textContent = "Click me for info!";
 elementBoxOne.style.backgroundColor = '#eee';
 elementBoxOne.style.padding = '10px';
-elementBoxOne.style.width = '7%';
 
 var boxOne = document.getElementById('makeMeAnArray').appendChild(elementBoxOne);
 boxOne.addEventListener('click', PlayingWithProperties, false);
-
-var elementBoxTwo = document.createElement('div');
-elementBoxTwo.textContent = "Click me for red words and fat font!";
-elementBoxTwo.style.backgroundColor = '#b8860b';
-elementBoxTwo.style.padding = '10px';
-
-var boxTwo = document.getElementById('makeMeAnArray').appendChild(elementBoxTwo);
-
-boxTwo.addEventListener('click', MakeFontFatAndWordsRed, false);
 
 function PlayingWithProperties() {
     //alert("Height: " + " " + window.innerHeight + " " + "Width: " + " " + window.innerWidth);
@@ -80,6 +71,16 @@ function PlayingWithProperties() {
     //alert(document.getElementById('makeMeAnArray').innerHTML = "Screen Width: " + screen.width + " " + "Screen Height: " + screen.height);
 }
 
+/* Add a stylesheet that displays the changed words in fat font and red */
+var elementBoxTwo = document.createElement('div');
+elementBoxTwo.textContent = "Click me for red words and fat font!";
+elementBoxTwo.style.backgroundColor = '#b8860b';
+elementBoxTwo.style.padding = '10px';
+
+var boxTwo = document.getElementById('makeMeAnArray').appendChild(elementBoxTwo);
+
+boxTwo.addEventListener('click', MakeFontFatAndWordsRed, false);
+
 function MakeFontFatAndWordsRed() {
     var elementTag = document.getElementsByTagName('p');
     for (var i = 0; i < elementTag.length; i++) {
@@ -87,6 +88,40 @@ function MakeFontFatAndWordsRed() {
     }
 }
 
-window.alert('hej');
-window.open('hejhej');
-window.print('hejhejhej');
+/* --- 5. PLay with the Methods  --- */
+var elementBoxThree = document.createElement('div');
+elementBoxThree.textContent = "Click me for different windows'";
+elementBoxThree.style.backgroundColor = 'coral';
+elementBoxThree.style.padding = '10px';
+
+var boxThree = document.getElementById('makeMeAnArray').appendChild(elementBoxThree);
+boxThree.addEventListener('click', PlayWithWindowThings, false);
+
+function PlayWithWindowThings() {
+    window.alert('hej');
+    window.open('hejhej');
+    window.print('hejhejhej');
+}
+
+/* --- 6. Play with the DOM-properties --- */
+var elementBoxFour = document.createElement('div');
+elementBoxFour.textContent = "Click me for DOM-properties!";
+elementBoxFour.style.backgroundColor = 'lightblue';
+elementBoxFour.style.padding = '10px';
+
+var boxThree = document.getElementById('makeMeAnArray').appendChild(elementBoxFour);
+
+boxThree.addEventListener('click', PlayWithDOMProperties, false);
+
+function PlayWithDOMProperties() {
+    alert(document.title); //Visar titeln på hemsidan
+    alert(document.lastModified); //Visar när senaste ändringen är gjord
+    alert(document.URL); //Returnerar en sträng av nuvarande dokumentets URL
+    alert(document.domain); //Returnerar domänen av nuvarande dokumentet
+}
+
+/* 7. Save the text from the makeMeAnArray-paragraph into an array. */
+var array = document.getElementById('makeMeAnArray');
+for (var i = 0; i < array.length; i++) {
+    alert(array[i].innerText);
+}
