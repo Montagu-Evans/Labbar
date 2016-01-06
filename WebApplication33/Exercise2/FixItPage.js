@@ -120,7 +120,10 @@ function PlayWithDOMProperties() {
     alert(document.domain); //Returnerar domänen av nuvarande dokumentet
 }
 
-/* 7. Save the text from the makeMeAnArray-paragraph into an array. */
+/* 7. Save the text from the makeMeAnArray-paragraph into an array. 
+ * 8. Use all the string methods and propertys allong with the array
+ * 9. check if the 4th element in the array is a number */
+
 var elementBoxFive = document.createElement('div');
 elementBoxFive.textContent = "Click med for getting a text in an array";
 elementBoxFive.style.backgroundColor = "darkgrey";
@@ -131,10 +134,38 @@ var boxFive = document.getElementById('makeMeAnArray').appendChild(elementBoxFiv
 boxFive.addEventListener('click', TextToArray, false);
 
 function TextToArray() {
-    var text = document.getElementById('makeMeAnArray').innerHTML;
+    var text = document.getElementById('makeMeAnArray').innerText;
     for (var i = 0; i < text.length; i++) {
-        var array = text[i].split(' ');
-        console.log(array);
-        alert(array);
+        //var array = text[i].split(' ');
+        //var array = text[i].toUpperCase(); //Gör chars till versaler
+        //var array = text[i].toLowerCase(); //Gör chars till små bokstäver
+        //var array = text[i].charAt(600);
+        //var array = text[i].indexOf(1);
+        //var array = text[i].lastIndexOf(1);
+        //var array = text[i].substring(19, 25);
+        //var array = text[i].trim(); //Tar bort vitt brus på båda sidor om str
+        //var array = text[i].replace("greplin", "wihoooo");
+        //console.log(array);
+
+       
+    }
+
+}
+
+var elementBoxSix = document.createElement('div');
+elementBoxSix.textContent = "Click me to check if it's a number";
+elementBoxSix.style.backgroundColor = "grey";
+elementBoxSix.style.padding = "10px";
+
+var boxSix = document.getElementById('makeMeAnArray').appendChild(elementBoxSix);
+
+boxSix.addEventListener('click', IsNumber, false);
+
+function IsNumber() {
+    var text = document.getElementById('makeMeAnArray').innerText;
+    for (var i = 0; i < text.length; i++) {
+        var array = text[4];
+        var char = isNaN(array);
+        alert(char);
     }
 }
