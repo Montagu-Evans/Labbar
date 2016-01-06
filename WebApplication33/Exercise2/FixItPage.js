@@ -50,25 +50,25 @@ var boxOne = document.getElementById('makeMeAnArray').appendChild(elementBoxOne)
 boxOne.addEventListener('click', PlayingWithProperties, false);
 
 function PlayingWithProperties() {
-    //alert("Height: " + " " + window.innerHeight + " " + "Width: " + " " + window.innerWidth);
+    alert("Height: " + " " + window.innerHeight + " " + "Width: " + " " + window.innerWidth);
 
-    //alert('pageXOffset:' + window.pageXOffset + ' pageYOffset:' + window.pageYOffset);
+    alert('pageXOffset:' + window.pageXOffset + ' pageYOffset:' + window.pageYOffset);
 
-    //alert('Pointer is at x:' + window.screenX + 'y:' + window.screenY);
+    alert('Pointer is at x:' + window.screenX + 'y:' + window.screenY);
 
-    //alert("The URL: " + window.location);
+    alert("The URL: " + window.location);
 
-    //alert(window.document.getElementById('makeMeAnArray').innerText); //Hämtar ut dokumentets text på det skrivna idt.
+    alert(window.document.getElementById('makeMeAnArray').innerText); //Hämtar ut dokumentets text på det skrivna idt.
 
-    //alert(window.history.forward()); //Tar en till nästa sida man varit inne på
+    alert(window.history.forward()); //Tar en till nästa sida man varit inne på
 
-    //alert(window.history.length); //kollar hur många sidor man varit inne på
+    alert(window.history.length); //kollar hur många sidor man varit inne på
 
     //Innehåller information om användarens skärm. window-prefixet är inte nödvändigt.
-    //alert(document.getElementById('makeMeAnArray').innerHTML =
-    //    "Available Screen Height: " + screen.availHeight);
+    alert(document.getElementById('makeMeAnArray').innerHTML =
+        "Available Screen Height: " + screen.availHeight);
 
-    //alert(document.getElementById('makeMeAnArray').innerHTML = "Screen Width: " + screen.width + " " + "Screen Height: " + screen.height);
+    alert(document.getElementById('makeMeAnArray').innerHTML = "Screen Width: " + screen.width + " " + "Screen Height: " + screen.height);
 }
 
 /* Add a stylesheet that displays the changed words in fat font and red */
@@ -109,9 +109,9 @@ elementBoxFour.textContent = "Click me for DOM-properties!";
 elementBoxFour.style.backgroundColor = 'lightblue';
 elementBoxFour.style.padding = '10px';
 
-var boxThree = document.getElementById('makeMeAnArray').appendChild(elementBoxFour);
+var boxFour = document.getElementById('makeMeAnArray').appendChild(elementBoxFour);
 
-boxThree.addEventListener('click', PlayWithDOMProperties, false);
+boxFour.addEventListener('click', PlayWithDOMProperties, false);
 
 function PlayWithDOMProperties() {
     alert(document.title); //Visar titeln på hemsidan
@@ -121,7 +121,20 @@ function PlayWithDOMProperties() {
 }
 
 /* 7. Save the text from the makeMeAnArray-paragraph into an array. */
-var array = document.getElementById('makeMeAnArray');
-for (var i = 0; i < array.length; i++) {
-    alert(array[i].innerText);
+var elementBoxFive = document.createElement('div');
+elementBoxFive.textContent = "Click med for getting a text in an array";
+elementBoxFive.style.backgroundColor = "darkgrey";
+elementBoxFive.style.padding = "10px";
+
+var boxFive = document.getElementById('makeMeAnArray').appendChild(elementBoxFive);
+
+boxFive.addEventListener('click', TextToArray, false);
+
+function TextToArray() {
+    var text = document.getElementById('makeMeAnArray').innerHTML;
+    for (var i = 0; i < text.length; i++) {
+        var array = text[i].split(' ');
+        console.log(array);
+        alert(array);
+    }
 }
