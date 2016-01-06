@@ -8,7 +8,7 @@ with an alert that shows the result when the box is clicked!
 2. SKIP **
     Add som tags that doesn't change the visual part of the paragraph.
 
-3.Play with the properties at page 124 in the book. 
+3.Play with the properties at page 124 in the book.
   Use properties creatively to display things at the html page
 4.Add a stylesheet that displays the changed words in fat font and in red.
 5. PLay with the Methods 
@@ -38,3 +38,37 @@ Bonus exercises:
  and look at JS String, JS Number, JS Math and JS Date
 
 */
+
+/* --- Playing with properties on PAGE 124 --- */
+var element = document.createElement('div');
+element.textContent = "Click me for info!";
+element.setAttribute('class', 'divbox');
+//element.style.border = '2px';
+element.style.backgroundColor = '#eee';
+element.style.padding = '10px';
+element.style.width = '7%';
+
+var boxOne = document.getElementById('makeMeAnArray').appendChild(element);
+boxOne.addEventListener('click', PlayingWithProperties, false);
+
+function PlayingWithProperties() {
+    //alert("Height: " + " " + window.innerHeight + " " + "Width: " + " " + window.innerWidth);
+
+    //alert('pageXOffset:' + window.pageXOffset + ' pageYOffset:' + window.pageYOffset);
+
+    //alert('Pointer is at x:' + window.screenX + 'y:' + window.screenY);
+
+    //alert("The URL: " + window.location);
+
+    //alert(window.document.getElementById('makeMeAnArray').innerText); //Hämtar ut dokumentets text på det skrivna idt.
+
+    //alert(window.history.forward()); //Tar en till nästa sida man varit inne på
+
+    //alert(window.history.length); //kollar hur många sidor man varit inne på
+
+    //Innehåller information om användarens skärm. window-prefixet är inte nödvändigt.
+    //alert(document.getElementById('makeMeAnArray').innerHTML =
+    //    "Available Screen Height: " + screen.availHeight);
+
+    //alert(document.getElementById('makeMeAnArray').innerHTML = "Screen Width: " + screen.width + " " + "Screen Height: " + screen.height);
+}
