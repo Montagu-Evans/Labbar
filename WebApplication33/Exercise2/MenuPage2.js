@@ -46,7 +46,7 @@ function createBurgers(name, size, dayOfTheWeek, price) {
     return burger;
 }
 
-function createAllBurgerDetails() {
+function createElementsForBurgers() {
     for (var i = 0; i < burgers.length; i++) {
         var img = document.createElement('img');
         img.src = "http://localhost:22684/Images/Hamburger.png";
@@ -78,7 +78,7 @@ function createAllBurgerDetails() {
 }
 
 createElements();
-createAllBurgerDetails();
+createElementsForBurgers();
 
 function Product(name, size, price, dayOfTheWeek) {
     this.name = name;
@@ -97,7 +97,7 @@ var drinks = [
     new Product('Strawberry Milkshake', 'medium', 6.99, 'sunday')
 ];
 
-function createAllDrinkDetails() {
+function createElementsForDrinks() {
     for (var i = 0; i < drinks.length; i++) {
         var img = document.createElement('img');
         img.src = 'http://localhost:22684/Images/Drink.png';
@@ -125,5 +125,85 @@ function createAllDrinkDetails() {
     }
 }
 
-createAllDrinkDetails();
+createElementsForDrinks();
 
+var pizzas = [
+    new Product('Hawaii Pizza', 'normal', 18.99, 'monday'),
+    new Product('Cappricosa Pizza', 'normal', 18.99, 'tuesday'),
+    new Product('Kebap Pizza', 'normal', 20.99, 'wednesday'),
+    new Product('Barcelona Pizza', 'normal', 18.99, 'thursday'),
+    new Product("L'italia Pizza", 'normal', 18.99, 'friday'),
+    new Product('Gorgonzola Pizza', 'normal', 18.99, 'saturday'),
+    new Product('Wihowahu Pizza', 'normal', 18.99, 'sunday')
+];
+
+function createElementsForPizzas() {
+    for (var i = 0; i < pizzas.length; i++) {
+        var img = document.createElement('img');
+        img.src = 'http://localhost:22684/Images/Pizza.png';
+
+        var createElement = document.createElement('article')
+            .appendChild(document.createElement('fieldset'))
+            .appendChild(document.createElement('legend'))
+            .appendChild(document.createTextNode(pizzas[i].dayOfTheWeek + " pizzas"))
+            .parentNode
+            .parentNode
+            .appendChild(document.createElement('h3'))
+            .appendChild(document.createTextNode(pizzas[i].name))
+            .parentNode
+            .parentNode;
+
+        createElement.appendChild(document.createElement('span')).appendChild(img);
+
+        createElement.appendChild(document.createElement('div'))
+            .appendChild(document.createTextNode('price: ' + pizzas[i].price));
+        createElement.appendChild(document.createElement('div'))
+            .appendChild(document.createTextNode('size: ' + pizzas[i].size));
+
+        var pizzaPlace = document.getElementById('pizzaPlace');
+        pizzaPlace.appendChild(createElement);
+    }
+}
+
+createElementsForPizzas();
+
+var subs = [
+    new Product('club sandwich', '30ft', 9.99, 'monday'),
+    new Product('party sandwich', '15ft', 6.99, 'tuesday'),
+    new Product('sallad sandwich', '30ft', 9.99, 'wednesday'),
+    new Product('cucumber sandwich', '15ft', 6.99, 'thursday'),
+    new Product('Tofu sandwich', '60ft', 17.99, 'friday'),
+    new Product('House sandwich', '30ft', 9.99, 'saturday'),
+    new Product('Mormors sandwich', '60ft', 19.99, 'sunday')
+];
+
+function createElementsForSubs() {
+    for (var i = 0; i < subs.length; i++) {
+        var img = document.createElement('img');
+        img.src = 'http://localhost:22684/Images/Subs.PNG';
+
+        var createElement = document.createElement('article')
+            .appendChild(document.createElement('fieldset'))
+            .appendChild(document.createElement('legend'))
+            .appendChild(document.createTextNode(subs[i].dayOfTheWeek + ' sandwich'))
+            .parentNode
+            .parentNode
+            .appendChild(document.createElement('h3'))
+            .appendChild(document.createTextNode(subs[i].name))
+            .parentNode
+            .parentNode;
+
+        createElement.appendChild(document.createElement('span'))
+            .appendChild(img);
+
+        createElement.appendChild(document.createElement('div'))
+            .appendChild(document.createTextNode('proce: ' + subs[i].price));
+        createElement.appendChild(document.createElement('div'))
+            .appendChild(document.createTextNode('size: ' + subs[i].size));
+
+        var subsPlace = document.getElementById('subsPlace');
+        subsPlace.appendChild(createElement);
+    }
+}
+
+createElementsForSubs();
