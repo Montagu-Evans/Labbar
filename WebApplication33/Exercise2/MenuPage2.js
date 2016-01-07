@@ -207,3 +207,18 @@ function createElementsForSubs() {
 }
 
 createElementsForSubs();
+
+function linkToFixIt() {
+    var link = document.createElement('a');
+    link.href = 'http://localhost:22684/FixIt.html';
+    link.style.fontSize = '1rem';
+
+    var goTo = document.createElement('div')
+        .appendChild(link)
+        .appendChild(document.createTextNode(' Go to fixit page'));
+
+    var fixit = document.getElementById('ad');
+    fixit.appendChild(link);
+}
+
+linkToFixIt();
