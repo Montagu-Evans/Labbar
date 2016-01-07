@@ -39,7 +39,6 @@ Bonus exercises:
 
 */
 
-
 /* --- 3.Play with the properties at page 124 in the book. --- */
 var elementBoxOne = document.createElement('div');
 elementBoxOne.textContent = "Click me for info!";
@@ -192,3 +191,16 @@ function ReplaceWordWithPI() {
     var replacingText = text[2].replace(text[2], Math.PI);
     alert(text[2] + 'is replaced with: ' + Math.round(replacingText));
 }
+
+/* 12. Calculate how many days it's until your birthday and present it. */
+
+function DaysToBirthday() {
+    var birthday = new Date(1988, 2, 9);
+    var today = new Date();
+    var time = 1000 * 60 * 60 * 24;
+    birthday.setFullYear(today.getFullYear());
+    var diff = (birthday - today) / (time);
+    alert(Math.ceil(diff));
+}
+
+
