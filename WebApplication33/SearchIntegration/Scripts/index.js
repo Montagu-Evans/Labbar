@@ -11,7 +11,7 @@ Uppgift
 
 Uppgiften är att skapa en förbättrad uggly Burgers med sökfunktion och filtrering. Sidan ska vara välbyggd och lätt att förstå. All javascript ska byggas om med jQuery. God kodningsstandad ska följas.
 
-Skapa ett nytt projekt vid namn SearchIntegration i din uggly burger soloution. Skapa 1 eller 4 JSON-filer med de olika kategorierna burgers/subs/drings/pizzas. Lägg till en egenskap på alla produkterna som beskriver 2-3 meningar om produkten.
+Skapa ett nytt projekt vid namn SearchIntegration i din uggly mondayburger soloution. Skapa 1 eller 4 JSON-filer med de olika kategorierna burgers/subs/drings/pizzas. Lägg till en egenskap på alla produkterna som beskriver 2-3 meningar om produkten.
 
 Bygg upp ny HTML och CSS för denna sidan med regnbågen som färginspiration.
 

@@ -4,21 +4,25 @@
     "url_image": "../localhost:41348/Images/Hamburger.png",
     "about": "This delicious burger has some great ingredients with spicy fishbone barriers mixed with muddywater-fishcrum"
   },
+
   {
     "burgerName": "Bamboo Burger",
     "url_image": "../localhost:41348/Images/Hamburger.png",
     "about": "With its amazing teeth-struggling bamboo shots makes the Bamboo Burger our most southern burger-ish burger yet! A must have for the crazies!"
   },
+
   {
     "burgerName": "Shou-Shou Double Burger",
     "url_image": "../localhost:41348/Images/Hamburger.png",
     "about": "Prior to this day we've been celebratating the beginning of a new era. The Shou-Shou Double Burger is wanted for its soothing taste of self-endorsment."
   },
+
   {
     "burgerName": "Franklin Burger",
     "url_image": "../localhost:41348/Images/Hamburger.png",
     "about": "For all Aretha Franklin-trippin' music junkies makes this burger the yummiest burger today."
   },
+
   {
     "burgerName": "Smell-Ya-Latahz Burger-Hatahz",
     "url_image": "../localhost:41348/Images/Hamburger.png",
