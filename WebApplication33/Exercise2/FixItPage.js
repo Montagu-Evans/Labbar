@@ -121,8 +121,8 @@ function PlayWithDOMProperties() {
 }
 
 /* 7. Save the text from the makeMeAnArray-paragraph into an array. 
- * 8. Use all the string methods and propertys allong with the array
- * 9. check if the 4th element in the array is a number */
+ * 8. Use all the string methods and propertys allong with the array */
+var text = document.getElementById('makeMeAnArray').innerText.split(' ');
 
 var elementBoxFive = document.createElement('div');
 elementBoxFive.textContent = "Click med for getting a text in an array";
@@ -134,9 +134,8 @@ var boxFive = document.getElementById('makeMeAnArray').appendChild(elementBoxFiv
 boxFive.addEventListener('click', TextToArray, false);
 
 function TextToArray() {
-    var text = document.getElementById('makeMeAnArray').innerText;
     for (var i = 0; i < text.length; i++) {
-        //var array = text[i].split(' ');
+        var array = text[i].split(' ');
         //var array = text[i].toUpperCase(); //Gör chars till versaler
         //var array = text[i].toLowerCase(); //Gör chars till små bokstäver
         //var array = text[i].charAt(600);
@@ -146,12 +145,12 @@ function TextToArray() {
         //var array = text[i].trim(); //Tar bort vitt brus på båda sidor om str
         //var array = text[i].replace("greplin", "wihoooo");
         //console.log(array);
-
-       
+        alert(array);
     }
 
 }
 
+/* 9. check if the 4th element in the array is a number */
 var elementBoxSix = document.createElement('div');
 elementBoxSix.textContent = "Click me to check if it's a number";
 elementBoxSix.style.backgroundColor = "grey";
@@ -162,10 +161,34 @@ var boxSix = document.getElementById('makeMeAnArray').appendChild(elementBoxSix)
 boxSix.addEventListener('click', IsNumber, false);
 
 function IsNumber() {
-    var text = document.getElementById('makeMeAnArray').innerText;
-    for (var i = 0; i < text.length; i++) {
-        var array = text[4];
-        var char = isNaN(array);
-        alert(char);
-    }
+    alert(isNaN(text[4]));
+}
+
+/* --- 10. Round one of the numbers in the paragraph up/down --- */
+var elementBoxSeven = document.createElement('div');
+elementBoxSeven.textContent = "Click me to round numbers";
+elementBoxSeven.style.backgroundColor = "lightgreen";
+elementBoxSeven.style.padding = '10px';
+
+var boxSeven = document.getElementById('makeMeAnArray').appendChild(elementBoxSeven);
+
+boxSeven.addEventListener('click', RoundNumbers, false);
+
+function RoundNumbers() {
+    alert(text[4] + ' is rounded to: ' + Math.round(text[4]));
+}
+
+/* 11. replace the 3rd word with PI then roud it to the nearest integer */
+var elementBoxEight = document.createElement('div');
+elementBoxEight.textContent = "Click me to change word with PI";
+elementBoxEight.style.backgroundColor = "darkcyan";
+elementBoxEight.style.padding = '10px';
+
+var boxEight = document.getElementById('makeMeAnArray').appendChild(elementBoxEight);
+
+boxEight.addEventListener('click', ReplaceWordWithPI, false);
+
+function ReplaceWordWithPI() {
+    var replacingText = text[2].replace(text[2], Math.PI);
+    alert(text[2] + 'is replaced with: ' + Math.round(replacingText));
 }
