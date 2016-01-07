@@ -46,9 +46,9 @@ elementBoxOne.style.backgroundColor = '#eee';
 elementBoxOne.style.padding = '10px';
 
 var boxOne = document.getElementById('makeMeAnArray').appendChild(elementBoxOne);
-boxOne.addEventListener('click', PlayingWithProperties, false);
+boxOne.addEventListener('click', playingWithProperties, false);
 
-function PlayingWithProperties() {
+function playingWithProperties() {
     alert("Height: " + " " + window.innerHeight + " " + "Width: " + " " + window.innerWidth);
 
     alert('pageXOffset:' + window.pageXOffset + ' pageYOffset:' + window.pageYOffset);
@@ -78,13 +78,14 @@ elementBoxTwo.style.padding = '10px';
 
 var boxTwo = document.getElementById('makeMeAnArray').appendChild(elementBoxTwo);
 
-boxTwo.addEventListener('click', MakeFontFatAndWordsRed, false);
+boxTwo.addEventListener('click', makeFontFatAndWordsRed, false);
 
-function MakeFontFatAndWordsRed() {
+function makeFontFatAndWordsRed() {
     var elementTag = document.getElementsByTagName('p');
     for (var i = 0; i < elementTag.length; i++) {
-        alert(elementTag[i].innerHTML = elementTag[i].innerHTML.replace('meebo', '<span style="color:red"><strong>meebo</strong></span>'));
+        elementTag[i].innerHTML = elementTag[i].innerHTML.replace('meebo', '<span style="color:red"><strong>meebo</strong></span>');
     }
+    alert(elementTag);
 }
 
 /* --- 5. PLay with the Methods  --- */
@@ -94,9 +95,9 @@ elementBoxThree.style.backgroundColor = 'coral';
 elementBoxThree.style.padding = '10px';
 
 var boxThree = document.getElementById('makeMeAnArray').appendChild(elementBoxThree);
-boxThree.addEventListener('click', PlayWithWindowThings, false);
+boxThree.addEventListener('click', playWithWindowThings, false);
 
-function PlayWithWindowThings() {
+function playWithWindowThings() {
     window.alert('hej');
     window.open('hejhej');
     window.print('hejhejhej');
@@ -110,9 +111,9 @@ elementBoxFour.style.padding = '10px';
 
 var boxFour = document.getElementById('makeMeAnArray').appendChild(elementBoxFour);
 
-boxFour.addEventListener('click', PlayWithDOMProperties, false);
+boxFour.addEventListener('click', playWithDOMProperties, false);
 
-function PlayWithDOMProperties() {
+function playWithDOMProperties() {
     alert(document.title); //Visar titeln på hemsidan
     alert(document.lastModified); //Visar när senaste ändringen är gjord
     alert(document.URL); //Returnerar en sträng av nuvarande dokumentets URL
@@ -130,9 +131,9 @@ elementBoxFive.style.padding = "10px";
 
 var boxFive = document.getElementById('makeMeAnArray').appendChild(elementBoxFive);
 
-boxFive.addEventListener('click', TextToArray, false);
+boxFive.addEventListener('click', textToArray, false);
 
-function TextToArray() {
+function textToArray() {
     for (var i = 0; i < text.length; i++) {
         var array = text[i].split(' ');
         //var array = text[i].toUpperCase(); //Gör chars till versaler
@@ -157,9 +158,9 @@ elementBoxSix.style.padding = "10px";
 
 var boxSix = document.getElementById('makeMeAnArray').appendChild(elementBoxSix);
 
-boxSix.addEventListener('click', IsNumber, false);
+boxSix.addEventListener('click', isNumber, false);
 
-function IsNumber() {
+function isNumber() {
     alert(isNaN(text[4]));
 }
 
@@ -171,9 +172,9 @@ elementBoxSeven.style.padding = '10px';
 
 var boxSeven = document.getElementById('makeMeAnArray').appendChild(elementBoxSeven);
 
-boxSeven.addEventListener('click', RoundNumbers, false);
+boxSeven.addEventListener('click', roundNumbers, false);
 
-function RoundNumbers() {
+function roundNumbers() {
     alert(text[4] + ' is rounded to: ' + Math.round(text[4]));
 }
 
@@ -185,22 +186,48 @@ elementBoxEight.style.padding = '10px';
 
 var boxEight = document.getElementById('makeMeAnArray').appendChild(elementBoxEight);
 
-boxEight.addEventListener('click', ReplaceWordWithPI, false);
+boxEight.addEventListener('click', replaceWordWithPI, false);
 
-function ReplaceWordWithPI() {
+function replaceWordWithPI() {
     var replacingText = text[2].replace(text[2], Math.PI);
-    alert(text[2] + 'is replaced with: ' + Math.round(replacingText));
+    alert(text[2] + " " + 'is replaced with: ' + " " + Math.round(replacingText));
 }
 
 /* 12. Calculate how many days it's until your birthday and present it. */
+var elementBoxNine = document.createElement('div');
+elementBoxNine.textContent = "Click me to see how many hours it is to my birthday";
+elementBoxNine.style.backgroundColor = "brown";
+elementBoxNine.style.padding = '10px';
 
-function DaysToBirthday() {
+var boxNine = document.getElementById('makeMeAnArray').appendChild(elementBoxNine);
+
+boxNine.addEventListener('click', daysToBirthday, false);
+
+function daysToBirthday() {
     var birthday = new Date(1988, 2, 9);
     var today = new Date();
     var time = 1000 * 60 * 60 * 24;
     birthday.setFullYear(today.getFullYear());
     var diff = (birthday - today) / (time);
-    alert(Math.ceil(diff));
+    alert('it is' + " " + Math.ceil(diff) + " " + 'days' + " " + 'to my birthday');
 }
 
+/* 13. Calculate how many minutes old you are and present it. */
+var elementBoxTen = document.createElement('div');
+elementBoxTen.textContent = "Click me to see how many minutes old I am";
+elementBoxTen.style.backgroundColor = "orange";
+elementBoxTen.style.padding = '10px';
 
+var boxTen = document.getElementById('makeMeAnArray').appendChild(elementBoxTen);
+
+boxTen.addEventListener('click', minutesToBirthday, false);
+
+function minutesToBirthday() {
+    var birthday = new Date(1988, 2, 9);
+    var today = new Date();
+    birthday.setFullYear(today.getFullYear());
+
+    var diff = Math.abs(birthday - today);
+    var minutes = Math.floor((diff / 1000) / 60);
+    alert('It is' + " " + minutes + " " + 'minutes left to my birthday');
+}
