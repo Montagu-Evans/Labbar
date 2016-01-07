@@ -80,6 +80,7 @@ function createElementsForBurgers() {
 createElements();
 createElementsForBurgers();
 
+/* -- Uppgift 2 --- */
 function Product(name, size, price, dayOfTheWeek) {
     this.name = name;
     this.size = size;
@@ -87,6 +88,7 @@ function Product(name, size, price, dayOfTheWeek) {
     this.dayOfTheWeek = dayOfTheWeek;
 }
 
+/* -- Uppgift 3 --- */
 var drinks = [
     new Product('Chillout Milkshake', 'tall', 5.99, 'monday'),
     new Product('Funky Milkshake', 'medium', 6.99, 'tuesday'),
@@ -127,6 +129,7 @@ function createElementsForDrinks() {
 
 createElementsForDrinks();
 
+/* -- Uppgift 4 --- */
 var pizzas = [
     new Product('Hawaii Pizza', 'normal', 18.99, 'monday'),
     new Product('Cappricosa Pizza', 'normal', 18.99, 'tuesday'),
@@ -167,6 +170,7 @@ function createElementsForPizzas() {
 
 createElementsForPizzas();
 
+/* -- Uppgift 5 --- */
 var subs = [
     new Product('club sandwich', '30ft', 9.99, 'monday'),
     new Product('party sandwich', '15ft', 6.99, 'tuesday'),
@@ -208,6 +212,7 @@ function createElementsForSubs() {
 
 createElementsForSubs();
 
+/* -- Uppgift 6 --- */
 function linkToFixIt() {
     var link = document.createElement('a');
     link.href = 'http://localhost:22684/FixIt.html';
