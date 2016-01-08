@@ -1,0 +1,157 @@
+﻿[
+  {
+    "name": "Fishbone Burger",
+    "type": "burgers",
+    "price": 9.99,
+    "url_image": "../Images/Hamburger.png",
+    "about": "This delicious burger has some great ingredients with spicy fishbone barriers mixed with muddywater-fishcrum"
+  },
+
+  {
+    "name": "Bamboo Burger",
+    "url_image": "../Images/Hamburger.png",
+    "type": "burgers",
+    "price": 9.99,
+    "about": "With its amazing teeth-struggling bamboo shots makes the Bamboo Burger our most southern burger-ish burger yet! A must have for the crazies!"
+  },
+
+  {
+    "name": "Shou-Shou Double Burger",
+    "type": "burgers",
+    "price": 9.99,
+    "url_image": "../Images/Hamburger.png",
+    "about": "Prior to this day we've been celebratating the beginning of a new era. The Shou-Shou Double Burger is wanted for its soothing taste of self-endorsment."
+  },
+
+  {
+    "name": "Franklin Burger",
+    "type": "burgers",
+    "price": 9.99,
+    "url_image": "../Images/Hamburger.png",
+    "about": "For all Aretha Franklin-trippin' music junkies makes this burger the yummiest burger today."
+  },
+
+  {
+    "name": "Smell-Ya-Latahz Burger-Hatahz",
+    "type": "burgers",
+    "price": 9.99,
+    "url_image": "../Images/Hamburger.png",
+    "about": "We love people who think they hate burgers. We've made this with care and love for our hating brothers and sisters, mothers and fathers. It's so enjoyable and tasty to eat, even the burger haters gonna love it."
+  },
+
+  {
+    "name": "Cappriciosa",
+    "type": "pizzas",
+    "price": 9.99,
+    "url_image": "../Images/Pizza.png",
+    "about": "This delicious pizza has some great ingredients with spicy stuff on it with so much cheese you can barely finish."
+  },
+
+  {
+    "name": "Vesuvio",
+    "type": "pizzas",
+    "price": 9.99,
+    "url_image": "../Images/Pizza.png",
+    "about": "Very apetizing pizza with fish on it. I think. I haven't really eaten this pizza."
+  },
+
+  {
+    "name": "Hawaii",
+    "type": "pizzas",
+    "price": 9.99,
+    "url_image": "../Images/Pizza.png",
+    "about": "Hawaii is perfect and suits anyone! Fresh pineapples straight from the synthetic factory in Thailand"
+  },
+
+  {
+    "name": "Half Baked",
+    "type": "pizzas",
+    "price": 9.99,
+    "url_image": "../Images/Pizza.png",
+    "about": "You like it all in? In this half-baked pizza we put in everything you need to know. And don't need to know. It's delicious nonetheless!"
+  },
+
+  {
+    "name": "Volcano",
+    "type": "pizzas",
+    "price": 9.99,
+    "url_image": "../Images/Pizza.png",
+    "about": "This pizza is very new on the market. It's known to put four pizzas into one. If you can eat it all you'll get a t-shirt where it says: Hey! I'm not fat just because I ate a volcano pizza!"
+  },
+
+  {
+    "name": "Sallado Sandwich",
+    "type": "subs",
+    "price": 9.99,
+    "url_image": "../Images/Subs.PNG",
+    "about": "This delicious sandwich has some great ingredients with spicy sallad mixed with crumbread"
+  },
+
+  {
+    "name": "Quorn Sandwich",
+    "type": "subs",
+    "price": 9.99,
+    "url_image": "../Images/Subs.PNG",
+    "about": "With its amazing teeth-struggling quorn-meat-like-filé makes the Quorn Sandwich our most southern sub-ish sandwich yet! A must have for the crazies!"
+  },
+
+  {
+    "name": "Chicken Sandwich",
+    "type": "subs",
+    "price": 9.99,
+    "url_image": "../Images/Subs.PNG",
+    "about": "Prior to this day we've been celebratating the beginning of a new era. THe Chicken Sandwich is wanted for its soothing taste of self-endorsment."
+  },
+
+  {
+    "name": "Currywurst Sandwich",
+    "type": "subs",
+    "price": 9.99,
+    "url_image": "../Images/Subs.PNG",
+    "about": "ICH BIN EIN BERLINER! This is one of the non-healthiest sandwiches in the world to this day."
+  },
+
+  {
+    "name": "CoffeeTasting Sandwich",
+    "type": "subs",
+    "price": 9.99,
+    "url_image": "../Images/Subs.PNG",
+    "about": "We love people. We love science. We love making and we love eating. We've made this with care and love for our customers It's hard to fathom how great this recipe is. So enjoyable every taste, even when the going gets tough!"
+  },
+
+  {
+    "name": "Tequila",
+    "type": "drinks",
+    "price": 9.99,
+    "url_image": "../Images/Drink.png",
+    "about": "This is a delicious drink that serves well with the Fishbone Burger! We highly recommend this double."
+  },
+  {
+    "name": "Cocktail",
+    "type": "drinks",
+    "price": 9.99,
+    "url_image": "../Images/Drink.png",
+    "about": "This perculilar looking drink has a swelling taste and a dominant flavor of dynamic dogs own cocktail sprouts!"
+  },
+  {
+    "name": "Caipirinha",
+    "type": "drinks",
+    "price": 9.99,
+    "url_image": "../Images/Drink.png",
+    "about": "A fuzzy drink that makes you fuzz! Once you pop, you can't stop!"
+  },
+  {
+    "name": "Chocolate Kiss",
+    "type": "drinks",
+    "price": 9.99,
+    "url_image": "../Images/Drink.png",
+    "about": "A chocolatey-ish drink with bourbon, baileys and rum. This one is not for the weak!"
+  },
+  {
+    "name": "Das Boot",
+    "type": "drinks",
+    "price": 9.99,
+    "url_image": "../Images/Drink.png",
+    "about": "For those who serve the das boot challenge knows what this droubt beer is about. Take a swim in this amazingly huge boot beer"
+  }
+]

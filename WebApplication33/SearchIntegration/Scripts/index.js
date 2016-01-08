@@ -1,33 +1,91 @@
-﻿/*
- * Lab 3 - jQuery - instruktioner
+﻿/// <reference path="jquery-2.1.0-vsdoc.js" />
 
-Denna labb går ut på att du ska öva på
+$(document).ready(function () {
+    $('#search').keyup(function () {
+        var searchField = $('#search').val();
+        var regex = new RegExp(searchField, 'i');
 
-jQuery-syntax
-jQuery med Ajax-anrop för att hämta ut JSON-objekt.
-FIltrera JSON med jQUery
-Slå ihop HTML- och CSS-kunskaper med JavaScript och jQyuery.
-Uppgift
+        $.getJSON('products.json', function (data) {
+            var output = '<ul class="searchResults">';
 
-Uppgiften är att skapa en förbättrad uggly Burgers med sökfunktion och filtrering. Sidan ska vara välbyggd och lätt att förstå. All javascript ska byggas om med jQuery. God kodningsstandad ska följas.
+            $.each(data, function (key, val) {
+                if ((val.name.search(regex) !== -1 ||
+                    val.about.search(regex) !== -1)) {
+                    output += '<li>'
+                        + '<p>'
+                        + '<strong>'
+                        + val.name
+                        + '</strong>'
+                        + '</p>'
+                        + '<p>'
+                        + val.about
+                        + '</p>'
+                        + "<img src='Images/" + val.url_image + "'/>'"
+                        + '</li>';
+                }
+            });
+            output += "</ul>";
+            $('#productDiv').html(output);
+        });
+    });
 
-Skapa ett nytt projekt vid namn SearchIntegration i din uggly mondayburger soloution. Skapa 1 eller 4 JSON-filer med de olika kategorierna burgers/subs/drings/pizzas. Lägg till en egenskap på alla produkterna som beskriver 2-3 meningar om produkten.
+    $('.clickBox').on('click', function () {
+        var searchField = $('#search').val();
+        var regex = new RegExp(searchField, 'i');
 
-Bygg upp ny HTML och CSS för denna sidan med regnbågen som färginspiration.
+        $.getJSON('products.json', function (data) {
+            var output = '<ul class="searchResults">';
 
-(Om du är trött på burgare så kan du välja att skapa TV/Surfplattor/Datorer/Actioncameror istället, med 5-7 produkter per kategori.)
+            $.each(data, function (key, val) {
+                if ((val.name.search(regex) !== -1 ||
+                    val.about.search(regex) !== -1)) {
+                    if ($('#fullmenu').is(":checked")) {
+                        output += '<li>'
+                            + '<p>'
+                            + '<strong>'
+                            + val.name
+                            + '</strong>'
+                            + '</p>'
+                            + '<p>'
+                            + '<strong class="color">price: </strong>'
+                            + '<span class="lightCoral">'
+                            + '$'
+                            + val.price
+                            + '</span>'
+                            + '<p>'
+                            + '<strong class="color">about: </strong>'
+                            + val.about
+                            + '</p>'
+                            + "<img src='Images/" + val.url_image + "'/>'"
+                            + '</li>';
+                    } else if ($('#' + val.type).is(":checked")) {
+                        output += '<li>'
+                            + '<p>'
+                            + '<strong>'
+                            + val.name
+                            + '</strong>'
+                            + '</p>'
+                             + '<p>'
+                            + '<strong class="color">price: </strong>'
+                            + '<span class="lightCoral">'
+                            + '$'
+                            + val.price
+                            + '</span>'
+                            + '<p>'
+                            + '<strong class="color">about: </strong>'
+                            + val.about
+                            + '</p>'
+                            + "<img src='Images/" + val.url_image + "'/>'"
+                            + '</li>'
+                        + '<p></br></p>'
+                        + '<p></br></p>';
+                    }
+                }
+            });
+            output += "</ul>";
+            $('#productDiv').html(output);
+        });
+    });
+});
 
-Bygg och filtrera
-
-Bygg upp sidan genom att i ett jQuery-ajax-anrop hämta hem rätt JSON-fil eller filer. När man går in på sidan ska alla produkter visas. Kryssar man i en av 4 rutor som motsvarar kategorierna så syns bara dessa.
-
-Search
-
-Lägg till en textruta. Om man skriver något i textrutan och textsträngen matchar textinnehåll i en titel eller i produktbeskrivningen så ska den produkten visas. Sökningen ska ske live.
-
-Bonusuppgift: Swipe
-
-Om man tar tag i en produkt och swipar den till höger så försvinner den tills en ny sökning görs.
-Om man tar tag i en produkt och swipar den till vänster så skapas en lista med de produkter som swipats dit.
- */
 

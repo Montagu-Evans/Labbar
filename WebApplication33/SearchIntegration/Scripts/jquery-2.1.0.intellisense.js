@@ -955,14 +955,14 @@ intellisense.annotate(jQuery.fn, {
   'bind': function() {
     /// <signature>
     ///   <summary>Attach a handler to an event for the elements.</summary>
-    ///   <param name="eventType" type="String">A string containing one or more DOM event types, such as "click" or "submit," or custom event names.</param>
+    ///   <param name="eventType" type="String">A string containing one or more DOM event types, such as "clickBox" or "submit," or custom event names.</param>
     ///   <param name="eventData" type="Object">An object containing data that will be passed to the event handler.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute each time the event is triggered.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Attach a handler to an event for the elements.</summary>
-    ///   <param name="eventType" type="String">A string containing one or more DOM event types, such as "click" or "submit," or custom event names.</param>
+    ///   <param name="eventType" type="String">A string containing one or more DOM event types, such as "clickBox" or "submit," or custom event names.</param>
     ///   <param name="eventData" type="Object">An object containing data that will be passed to the event handler.</param>
     ///   <param name="preventBubble" type="Boolean">Setting the third argument to false will attach a function that prevents the default action from occurring and stops the event from bubbling. The default is true.</param>
     ///   <returns type="jQuery" />
@@ -1037,12 +1037,12 @@ intellisense.annotate(jQuery.fn, {
   },
   'click': function() {
     /// <signature>
-    ///   <summary>Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</summary>
+    ///   <summary>Bind an event handler to the "clickBox" JavaScript event, or trigger that event on an element.</summary>
     ///   <param name="handler(eventObject)" type="Function">A function to execute each time the event is triggered.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Bind an event handler to the "click" JavaScript event, or trigger that event on an element.</summary>
+    ///   <summary>Bind an event handler to the "clickBox" JavaScript event, or trigger that event on an element.</summary>
     ///   <param name="eventData" type="Object">An object containing data that will be passed to the event handler.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute each time the event is triggered.</param>
     ///   <returns type="jQuery" />
@@ -1155,14 +1155,14 @@ intellisense.annotate(jQuery.fn, {
     /// <signature>
     ///   <summary>Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements.</summary>
     ///   <param name="selector" type="String">A selector to filter the elements that trigger the event.</param>
-    ///   <param name="eventType" type="String">A string containing one or more space-separated JavaScript event types, such as "click" or "keydown," or custom event names.</param>
+    ///   <param name="eventType" type="String">A string containing one or more space-separated JavaScript event types, such as "clickBox" or "keydown," or custom event names.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute at the time the event is triggered.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Attach a handler to one or more events for all elements that match the selector, now or in the future, based on a specific set of root elements.</summary>
     ///   <param name="selector" type="String">A selector to filter the elements that trigger the event.</param>
-    ///   <param name="eventType" type="String">A string containing one or more space-separated JavaScript event types, such as "click" or "keydown," or custom event names.</param>
+    ///   <param name="eventType" type="String">A string containing one or more space-separated JavaScript event types, such as "clickBox" or "keydown," or custom event names.</param>
     ///   <param name="eventData" type="Object">An object containing data that will be passed to the event handler.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute at the time the event is triggered.</param>
     ///   <returns type="jQuery" />
@@ -1198,13 +1198,13 @@ intellisense.annotate(jQuery.fn, {
   'die': function() {
     /// <signature>
     ///   <summary>Remove event handlers previously attached using .live() from the elements.</summary>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as click or keydown.</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as clickBox or keydown.</param>
     ///   <param name="handler" type="String">The function that is no longer to be executed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Remove event handlers previously attached using .live() from the elements.</summary>
-    ///   <param name="events" type="PlainObject">A plain object of one or more event types, such as click or keydown and their corresponding functions that are no longer to be executed.</param>
+    ///   <param name="events" type="PlainObject">A plain object of one or more event types, such as clickBox or keydown and their corresponding functions that are no longer to be executed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
   },
@@ -1683,13 +1683,13 @@ intellisense.annotate(jQuery.fn, {
   'live': function() {
     /// <signature>
     ///   <summary>Attach an event handler for all elements which match the current selector, now and in the future.</summary>
-    ///   <param name="events" type="String">A string containing a JavaScript event type, such as "click" or "keydown." As of jQuery 1.4 the string can contain multiple, space-separated event types or custom event names.</param>
+    ///   <param name="events" type="String">A string containing a JavaScript event type, such as "clickBox" or "keydown." As of jQuery 1.4 the string can contain multiple, space-separated event types or custom event names.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute at the time the event is triggered.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Attach an event handler for all elements which match the current selector, now and in the future.</summary>
-    ///   <param name="events" type="String">A string containing a JavaScript event type, such as "click" or "keydown." As of jQuery 1.4 the string can contain multiple, space-separated event types or custom event names.</param>
+    ///   <param name="events" type="String">A string containing a JavaScript event type, such as "clickBox" or "keydown." As of jQuery 1.4 the string can contain multiple, space-separated event types or custom event names.</param>
     ///   <param name="data" type="PlainObject">An object containing data that will be passed to the event handler.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute at the time the event is triggered.</param>
     ///   <returns type="jQuery" />
@@ -1923,7 +1923,7 @@ intellisense.annotate(jQuery.fn, {
   'off': function() {
     /// <signature>
     ///   <summary>Remove an event handler.</summary>
-    ///   <param name="events" type="String">One or more space-separated event types and optional namespaces, or just namespaces, such as "click", "keydown.myPlugin", or ".myPlugin".</param>
+    ///   <param name="events" type="String">One or more space-separated event types and optional namespaces, or just namespaces, such as "clickBox", "keydown.myPlugin", or ".myPlugin".</param>
     ///   <param name="selector" type="String">A selector which should match the one originally passed to .on() when attaching event handlers.</param>
     ///   <param name="handler(eventObject)" type="Function">A handler function previously attached for the event(s), or the special value false.</param>
     ///   <returns type="jQuery" />
@@ -1954,7 +1954,7 @@ intellisense.annotate(jQuery.fn, {
   'on': function() {
     /// <signature>
     ///   <summary>Attach an event handler function for one or more events to the selected elements.</summary>
-    ///   <param name="events" type="String">One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".</param>
+    ///   <param name="events" type="String">One or more space-separated event types and optional namespaces, such as "clickBox" or "keydown.myPlugin".</param>
     ///   <param name="selector" type="String">A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.</param>
     ///   <param name="data" type="Anything">Data to be passed to the handler in event.data when an event is triggered.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.</param>
@@ -1971,14 +1971,14 @@ intellisense.annotate(jQuery.fn, {
   'one': function() {
     /// <signature>
     ///   <summary>Attach a handler to an event for the elements. The handler is executed at most once per element.</summary>
-    ///   <param name="events" type="String">A string containing one or more JavaScript event types, such as "click" or "submit," or custom event names.</param>
+    ///   <param name="events" type="String">A string containing one or more JavaScript event types, such as "clickBox" or "submit," or custom event names.</param>
     ///   <param name="data" type="PlainObject">An object containing data that will be passed to the event handler.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute at the time the event is triggered.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Attach a handler to an event for the elements. The handler is executed at most once per element.</summary>
-    ///   <param name="events" type="String">One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".</param>
+    ///   <param name="events" type="String">One or more space-separated event types and optional namespaces, such as "clickBox" or "keydown.myPlugin".</param>
     ///   <param name="selector" type="String">A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.</param>
     ///   <param name="data" type="Anything">Data to be passed to the handler in event.data when an event is triggered.</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.</param>
@@ -2496,7 +2496,7 @@ intellisense.annotate(jQuery.fn, {
   'trigger': function() {
     /// <signature>
     ///   <summary>Execute all handlers and behaviors attached to the matched elements for the given event type.</summary>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as click or submit.</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as clickBox or submit.</param>
     ///   <param name="extraParameters" type="">Additional parameters to pass along to the event handler.</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -2510,7 +2510,7 @@ intellisense.annotate(jQuery.fn, {
   'triggerHandler': function() {
     /// <signature>
     ///   <summary>Execute all handlers attached to an element for an event.</summary>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as click or submit.</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as clickBox or submit.</param>
     ///   <param name="extraParameters" type="Array">An array of additional parameters to pass along to the event handler.</param>
     ///   <returns type="Object" />
     /// </signature>
@@ -2518,13 +2518,13 @@ intellisense.annotate(jQuery.fn, {
   'unbind': function() {
     /// <signature>
     ///   <summary>Remove a previously-attached event handler from the elements.</summary>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as click or submit.</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as clickBox or submit.</param>
     ///   <param name="handler(eventObject)" type="Function">The function that is to be no longer executed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Remove a previously-attached event handler from the elements.</summary>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as click or submit.</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as clickBox or submit.</param>
     ///   <param name="false" type="Boolean">Unbinds the corresponding 'return false' function that was bound using .bind( eventType, false ).</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -2538,13 +2538,13 @@ intellisense.annotate(jQuery.fn, {
     /// <signature>
     ///   <summary>Remove a handler from the event for all elements which match the current selector, based upon a specific set of root elements.</summary>
     ///   <param name="selector" type="String">A selector which will be used to filter the event results.</param>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as "click" or "keydown"</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as "clickBox" or "keydown"</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
     ///   <summary>Remove a handler from the event for all elements which match the current selector, based upon a specific set of root elements.</summary>
     ///   <param name="selector" type="String">A selector which will be used to filter the event results.</param>
-    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as "click" or "keydown"</param>
+    ///   <param name="eventType" type="String">A string containing a JavaScript event type, such as "clickBox" or "keydown"</param>
     ///   <param name="handler(eventObject)" type="Function">A function to execute at the time the event is triggered.</param>
     ///   <returns type="jQuery" />
     /// </signature>

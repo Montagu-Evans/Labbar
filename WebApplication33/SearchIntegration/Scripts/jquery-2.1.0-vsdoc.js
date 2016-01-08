@@ -3128,7 +3128,7 @@
         ///     &#10;3 - bind(events)
         /// </summary>
         /// <param name="types" type="String">
-        ///     A string containing one or more DOM event types, such as "click" or "submit," or custom event names.
+        ///     A string containing one or more DOM event types, such as "clickBox" or "submit," or custom event names.
         /// </param>
         /// <param name="data" type="Object">
         ///     An object containing data that will be passed to the event handler.
@@ -3224,10 +3224,10 @@
     };
     jQuery.prototype.click = function (data, fn) {
         /// <summary>
-        ///     Bind an event handler to the "click" JavaScript event, or trigger that event on an element.
-        ///     &#10;1 - click(handler(eventObject)) 
-        ///     &#10;2 - click(eventData, handler(eventObject)) 
-        ///     &#10;3 - click()
+        ///     Bind an event handler to the "clickBox" JavaScript event, or trigger that event on an element.
+        ///     &#10;1 - clickBox(handler(eventObject)) 
+        ///     &#10;2 - clickBox(eventData, handler(eventObject)) 
+        ///     &#10;3 - clickBox()
         /// </summary>
         /// <param name="data" type="Object">
         ///     An object containing data that will be passed to the event handler.
@@ -3544,7 +3544,7 @@
         ///     A selector to filter the elements that trigger the event.
         /// </param>
         /// <param name="types" type="String">
-        ///     A string containing one or more space-separated JavaScript event types, such as "click" or "keydown," or custom event names.
+        ///     A string containing one or more space-separated JavaScript event types, such as "clickBox" or "keydown," or custom event names.
         /// </param>
         /// <param name="data" type="Object">
         ///     An object containing data that will be passed to the event handler.
@@ -4937,7 +4937,7 @@
         ///     &#10;2 - off(events, selector)
         /// </summary>
         /// <param name="types" type="String">
-        ///     One or more space-separated event types and optional namespaces, or just namespaces, such as "click", "keydown.myPlugin", or ".myPlugin".
+        ///     One or more space-separated event types and optional namespaces, or just namespaces, such as "clickBox", "keydown.myPlugin", or ".myPlugin".
         /// </param>
         /// <param name="selector" type="String">
         ///     A selector which should match the one originally passed to .on() when attaching event handlers.
@@ -5048,7 +5048,7 @@
         ///     &#10;2 - on(events, selector, data)
         /// </summary>
         /// <param name="types" type="String">
-        ///     One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
+        ///     One or more space-separated event types and optional namespaces, such as "clickBox" or "keydown.myPlugin".
         /// </param>
         /// <param name="selector" type="String">
         ///     A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
@@ -5121,7 +5121,7 @@
         ///     &#10;3 - one(events, selector, data)
         /// </summary>
         /// <param name="types" type="String">
-        ///     One or more space-separated event types and optional namespaces, such as "click" or "keydown.myPlugin".
+        ///     One or more space-separated event types and optional namespaces, such as "clickBox" or "keydown.myPlugin".
         /// </param>
         /// <param name="selector" type="String">
         ///     A selector string to filter the descendants of the selected elements that trigger the event. If the selector is null or omitted, the event is always triggered when it reaches the selected element.
@@ -6325,7 +6325,7 @@
         ///     &#10;2 - trigger(event, extraParameters)
         /// </summary>
         /// <param name="type" type="String">
-        ///     A string containing a JavaScript event type, such as click or submit.
+        ///     A string containing a JavaScript event type, such as clickBox or submit.
         /// </param>
         /// <param name="data" type="">
         ///     Additional parameters to pass along to the event handler.
@@ -6341,7 +6341,7 @@
         ///     Execute all handlers attached to an element for an event.
         /// </summary>
         /// <param name="type" type="String">
-        ///     A string containing a JavaScript event type, such as click or submit.
+        ///     A string containing a JavaScript event type, such as clickBox or submit.
         /// </param>
         /// <param name="data" type="Array">
         ///     An array of additional parameters to pass along to the event handler.
@@ -6361,7 +6361,7 @@
         ///     &#10;3 - unbind(event)
         /// </summary>
         /// <param name="types" type="String">
-        ///     A string containing a JavaScript event type, such as click or submit.
+        ///     A string containing a JavaScript event type, such as clickBox or submit.
         /// </param>
         /// <param name="fn" type="Function">
         ///     The function that is to be no longer executed.
@@ -6383,7 +6383,7 @@
         ///     A selector which will be used to filter the event results.
         /// </param>
         /// <param name="types" type="String">
-        ///     A string containing a JavaScript event type, such as "click" or "keydown"
+        ///     A string containing a JavaScript event type, such as "clickBox" or "keydown"
         /// </param>
         /// <param name="fn" type="Function">
         ///     A function to execute at the time the event is triggered.
